@@ -1,8 +1,9 @@
-require "firstProject/cli/version"
-
-module FirstProject
-  module Cli
-    class Error < StandardError; end
-    # Your code goes here...
-  end
-end
+class MovieAPI::CLI 
+   
+   def call 
+     MovieAPI::.new.fetch 
+     MovieAPI::Movies.all.each do |movie| 
+       puts movie.name 
+     end 
+   end 
+ end
