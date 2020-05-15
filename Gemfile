@@ -8,7 +8,7 @@ gem "hashie"
 gem "octokit", "~> 2.0"
 gem 'awesome_print', :git => "git@github.com:awesome-print/awesome_print.git"
 gem 'emoji', '~> 1.0', '>= 1.0.7'
-
+gem 'dotenv-rails'
 gem "pry", :group => "development"
 
 
