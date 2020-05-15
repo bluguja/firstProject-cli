@@ -17,6 +17,16 @@ class CLI
     puts " "
     puts" Enter the title of the movie  to see the rating of the movie, the link "
     puts" to the reviews,and a short summary of the tiled movie "
+    puts " "
+    
+    # input strips any spaces and lines , an downcase ensures all characters entered are low case
+    @get_input_from_user = gets.strip.downcase 
+    
+    Api.
+    
+    
+    
+    
     
    end
   

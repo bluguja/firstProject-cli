@@ -1,8 +1,13 @@
 
-
-class Movie
+# This API class is responsible for getting processing info from the API web info)
+class API
   
-    def fetch 
+    def self.
+    end
+
+  
+    def fetch_web_info
+      
       key = ENV["MY_API_KEY"]
       url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=godfather&api-key=#{key}"
       
@@ -10,15 +15,15 @@ class Movie
      
      # @ 32.31 minutes
      
-     name = movie["display_title"]
+     name = Movies["display_title"]
      
-     rating = movie["mppa_rating"] 
+     rating = Movies["mppa_rating"] 
      
-     link = movie["link"] ["url"]
+     link = Movies["link"] ["url"]
      
      ## new instance of a Movie created
         MovieAPI::Movie.new(name, rating, link)
-      binding.prry
+      binding.pry
     end 
     
   end 

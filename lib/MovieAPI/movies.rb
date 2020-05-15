@@ -1,11 +1,12 @@
 #require 'pry'
-
+# this class is to parse info from web  regarding a movie using the name, link and rating
 class Movies
-  attr_accessor :name, :rating, :link , :publication_date
+  attr_accessor :name, :rating, :link , 
   
   @@all = []
   
-  def initialize(name,rating,link,publication_date) 
+  
+  def initialize(name,rating,link) #
     @name = name 
     @rating = rating 
     @link = link 
@@ -22,7 +23,6 @@ end
 ### in these methods we'll define how the information on each object can be returned
 
 #this method returns movie names eg "the God father"
-
 def movie_name
 end
 
