@@ -1,7 +1,7 @@
-class MovieCLI
+class CLI
   # thiss file is used to interface with the user
+  # executes the flow of what the application does
   
-  #executes the flow of what the application does
   def run
     
     puts" "

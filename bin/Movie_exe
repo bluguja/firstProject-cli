@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby 
+
+require_relative '../lib/environment.rb'
+
+cli_call = CLI.new # istanciated the class CLI in the file cli.rb

@@ -1,3 +1,5 @@
+
+
 class Movie
   
     def fetch 
@@ -5,7 +7,7 @@ class Movie
       url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=godfather&api-key=#{key}"
       
       response = HTTParty.get(url) 
-     # binding.pry 
+     
      # @ 32.31 minutes
      
      name = movie["display_title"]
@@ -16,7 +18,7 @@ class Movie
      
      ## new instance of a Movie created
         MovieAPI::Movie.new(name, rating, link)
-      
+      binding.prry
     end 
     
   end 
