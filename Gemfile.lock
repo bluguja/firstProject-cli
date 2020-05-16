@@ -124,6 +124,7 @@ DEPENDENCIES
   awesome_print!
   bundler (~> 2.0)
   colorize (~> 0.8.1)
+  dotenv
   dotenv-rails
   emoji (~> 1.0, >= 1.0.7)
   firstProject-cli!

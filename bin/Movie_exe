@@ -1,5 +1,6 @@
-#!/usr/bin/env ruby 
+#!/usr/bin/env ruby
+require_relative '../lib/MovieAPI/cli.rb'
 
 require_relative '../lib/environment.rb'
 
-cli_call = CLI.new # istanciated the class CLI in the file cli.rb
+cli_call = CLI.new.run # istanciated the class CLI in the file cli.rb

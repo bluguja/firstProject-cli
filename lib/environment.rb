@@ -14,6 +14,8 @@ require "httparty" ##interacting with api
 require "json"    ##parsing data from api in json
 require 'colorize'## used to color the characters in the terminal
 require 'emoji'## used to describe Emojis in the terminal
+require 'dotenv'
+
 
 # module MovieAPI
 #   class error < standardError; end 
