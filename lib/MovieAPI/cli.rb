@@ -23,6 +23,8 @@ class CLI
      @get_input_from_user = gets.strip.downcase 
     
      API.fetch_web_info # :: shows its nested in the MOVIEAPI folder
+     
+     
     
     
     
