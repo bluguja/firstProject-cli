@@ -11,7 +11,7 @@ gem 'emoji', '~> 1.0', '>= 1.0.7'
 gem 'dotenv-rails'
 gem "pry", :group => "development"
 gem 'dotenv'
-
+gem 'rubysl-open-uri', '~> 2.0'
 group :test do
   gem "rspec"
 end

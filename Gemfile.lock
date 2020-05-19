@@ -104,6 +104,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.3)
+    rubysl-open-uri (2.0.0)
     sawyer (0.5.5)
       addressable (~> 2.3.5)
       faraday (~> 0.8, < 0.10)
@@ -135,6 +136,7 @@ DEPENDENCIES
   rake (~> 10.0)
   require_all (~> 1.0)
   rspec
+  rubysl-open-uri (~> 2.0)
   sinatra (= 1.4.4)
 
 BUNDLED WITH
