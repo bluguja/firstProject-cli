@@ -53,17 +53,17 @@ class CLI
      def call_movie 
        API.new.fetch_web_info   # fetches the info from the url
        
-       Movies.all.each do |movie|# iterates through the Movies class in the @@all array
+       Movie.all.each do |movie|# iterates through the Movies class in the @@all array
      end
      
       def list_titles
-        Movies.all.sort_by do |display_title|
+        Movie.all.sort_by do |display_title|
           display_title.name
         end
       end 
       
       def list_links
-         Movies.all.sort_by do |display_link|
+         Movie.all.sort_by do |display_link|
           display_link.name
         end
       end 

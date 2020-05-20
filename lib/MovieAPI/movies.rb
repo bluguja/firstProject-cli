@@ -1,6 +1,6 @@
 #require 'pry'
 # this class is to parse info from web  regarding a movie using the name, link and rating
-class Movies
+class Movie
   attr_accessor :name, :rating, :link  
   
   @@all = []

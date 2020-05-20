@@ -12,7 +12,7 @@ class API
       
       response = HTTParty.get(URI(url))
       
-      response = ["results"].each do |movie|
+      response["results"].each do |movie|
         
         name = movie["display_title"]
         rating = movie["mpaa_rating"]
