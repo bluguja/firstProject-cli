@@ -37,7 +37,7 @@ class CLI
      when "rating"
        list rating
          
-      
+    end  
    end
  end
    
