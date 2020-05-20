@@ -19,8 +19,8 @@ class CLI
     puts" to the reviews,and a short summary of the tiled movie "
     puts " "
     
-     # input strips any spaces and lines , an downcase ensures all characters entered are low case
-     @get_input_from_user = gets.strip.downcase 
+    # input strips any spaces and lines , an downcase ensures all characters entered are low case
+    @get_input_from_user = gets.strip.downcase 
     
      API.fetch_web_info # :: shows its nested in the MOVIEAPI folder
    end
@@ -31,9 +31,11 @@ class CLI
        
        Movies.all.each do |movie|# iterates through the Movies class in the @@all array
        
-         puts movie.name        # puts out the movie name
+         puts movie.name  # name of movie
+         puts movi.rating # rating 
+         puts movie.link #  link to the title
          
-       binding.pry
+       #binding.pry
      end
    end
 end

@@ -18,7 +18,8 @@ class API
         rating = movie["mpaa_rating"]
         link = movie["link"]["url"]
         
-        Movie.new(name,rating,link)
+        Movie.new(name,rating,link)# new movie instatnce takes in a name, a rating , and a link 34sexit
+        
         
       binding.pry
      end 
