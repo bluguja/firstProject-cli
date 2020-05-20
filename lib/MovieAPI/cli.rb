@@ -5,6 +5,11 @@ class CLI
   def run 
     
     input = ""
+    
+    if input == "exit" || input == ""
+      puts "Thanks have a nice day!"
+    end
+    
     while input != "exit"
     
     puts" "
@@ -22,6 +27,7 @@ class CLI
     puts" To see the titles of movies  we have enter 'title'"
     puts" To see the link to the movies we have enter 'link'"
     puts" To see the MPPA ratings we have enter 'rating' "
+    puts " "
     
     input = ""
     while input != "exit"
@@ -39,6 +45,7 @@ class CLI
          
     end  
    end
+  end
  end
    
    
@@ -46,7 +53,7 @@ class CLI
        API.new.fetch_web_info   # fetches the info from the url
        
        Movies.all.each do |movie|# iterates through the Movies class in the @@all array
-       
+     end
       def list_titles
         Movie.all.sort_by do |display_title|
           display_title.name
@@ -65,14 +72,11 @@ class CLI
         end
       end
        
-        # puts movie.name  # name of movie
-        # puts movi.rating # rating 
-        # puts movie.link #  link to the title
-         
        #binding.pry
-     end
-   end
+  end
 end
+   
+
    
    
    
