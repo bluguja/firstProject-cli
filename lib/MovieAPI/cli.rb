@@ -35,6 +35,7 @@ class CLI
     input = gets.strip.downcase 
     
      API.fetch_web_info # :: shows its nested in the MOVIEAPI folder
+     
      case input
      when "title"
        list_titles
@@ -54,14 +55,15 @@ class CLI
        
        Movies.all.each do |movie|# iterates through the Movies class in the @@all array
      end
+     
       def list_titles
-        Movie.all.sort_by do |display_title|
+        Movies.all.sort_by do |display_title|
           display_title.name
         end
       end 
       
       def list_links
-         Movie.all.sort_by do |display_link|
+         Movies.all.sort_by do |display_link|
           display_link.name
         end
       end 
