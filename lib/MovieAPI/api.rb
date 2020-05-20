@@ -13,14 +13,15 @@ class API
       response = HTTParty.get(URI(url))
       
       response = ["results"].each do |movie|
+        
         name = movie["display_title"]
         rating = movie["mpaa_rating"]
-        link = ["link"]["url"]
+        link = movie["link"]["url"]
         
         Movie.new(name,rating,link)
         
       binding.pry
-    end 
-  end
+     end 
+    end
   end 
   

@@ -27,12 +27,15 @@ class CLI
    
    
      def call_movie 
-       Movie.API.new.fetch_web_info
-       Movie.Movies.all.each do |movie|
-         puts movie.name
+       API.new.fetch_web_info   # fetches the info from the url
        
+       Movies.all.each do |movie|# iterates through the Movies class in the @@all array
+       
+         puts movie.name        # puts out the movie name
+         
+       binding.pry
      end
-     
+   end
 end
    
    
