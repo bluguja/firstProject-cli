@@ -35,7 +35,7 @@ class CLI
      when "link"
        list_links
      when "rating"
-       list rating
+       list_ratings
          
     end  
    end
@@ -47,9 +47,27 @@ class CLI
        
        Movies.all.each do |movie|# iterates through the Movies class in the @@all array
        
-         puts movie.name  # name of movie
-         puts movi.rating # rating 
-         puts movie.link #  link to the title
+      def list_titles
+        Movie.all.sort_by do |display_title|
+          display_title.name
+        end
+      end 
+      
+      def list_links
+         Movie.all.sort_by do |display_link|
+          display_link.name
+        end
+      end 
+      
+      def list_ratings 
+         Movie.all.sort_by do |display_rating|
+          display_rating.name 
+        end
+      end
+       
+        # puts movie.name  # name of movie
+        # puts movi.rating # rating 
+        # puts movie.link #  link to the title
          
        #binding.pry
      end
