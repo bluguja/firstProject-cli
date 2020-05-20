@@ -11,18 +11,16 @@ class API
       url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=godfather&api-key=#{key}"
       
       response = HTTParty.get(URI(url))
-     binding.pry
-     # @ 32.31 minutes
-     
-    # name = Movies["display_title"]
-     
-    # rating = Movies["mppa_rating"] 
-     
-    # link = Movies["link"] ["url"]
-     
-     
       
+      response = ["results"].each do |movie|
+        name = movie["display_title"]
+        rating = movie["mpaa_rating"]
+        link = ["link"]["url"]
+        
+        Movie.new(name,rating,link)
+        
+      binding.pry
     end 
-    
+  end
   end 
   

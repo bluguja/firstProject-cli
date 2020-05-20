@@ -23,15 +23,16 @@ class CLI
      @get_input_from_user = gets.strip.downcase 
     
      API.fetch_web_info # :: shows its nested in the MOVIEAPI folder
-     
-     
-    
-    
-    
-    
-    
    end
-  
+   
+   
+     def call_movie 
+       Movie.API.new.fetch_web_info
+       Movie.Movies.all.each do |movie|
+         puts movie.name
+       
+     end
+     
 end
    
    
