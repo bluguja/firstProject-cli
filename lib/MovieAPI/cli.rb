@@ -4,13 +4,13 @@
   
   def run 
     
-    input = ""
+    input = " "
      
-    if input == "exit app" || input == ""
+    if input = "exit" || input = ""
       puts "Thanks have a nice day!"
     end
     
-    while input != "exit app"
+    while input != "exit "
     
     puts" "
     puts "oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo".green
@@ -23,26 +23,29 @@
     puts"oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo".green
     puts " "
     puts " "
-    puts" To exit at any time type 'exit app'"
+    puts" To exit at any time type 'exit'"
     puts" To see the titles of movie, the ratings and the link To"
     puts "the critics web, enter the  title of movie"
     puts " "
     
     
     
-    #input strips any spaces and lines , an downcase ensures all characters entered are low case
-    input = gets.strip.downcase 
     
-     API.fetch_web_info(input) # :: shows its nested in the MOVIEAPI folder
+    input = gets.strip.downcase        # requests input from user lowercase all
+    
+     API.fetch_web_info(input)       # :: shows its nested in the MOVIEAPI folder
+     
      CLI.list_titles
-     binding.pry
+    
+    
+    #binding.pry
      end
   end
- end
+ 
    
    
      def self.call_movie 
-       API.new.fetch_web_info()   # fetches the info from the url
+       API.new.fetch_web_info  # fetches the info from the url
        
        Movie.all.each do |movie|# iterates through the Movies class in the @@all array
      end
