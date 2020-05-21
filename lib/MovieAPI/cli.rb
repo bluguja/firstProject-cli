@@ -4,12 +4,12 @@
   
   def run 
     
-    input = " "
-     
-    if input = "exit" || input = ""
+    input = ""
+    
+     if input == "exit" || input == ""
       puts "Thanks have a nice day!"
     end
-    
+   
     while input != "exit "
     
     puts" "
@@ -23,13 +23,10 @@
     puts"oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo".green
     puts " "
     puts " "
-    puts" To exit at any time type 'exit'"
+    puts" To exit at any time type 'exit' "
     puts" To see the titles of movie, the ratings and the link To"
     puts "the critics web, enter the  title of movie"
     puts " "
-    
-    
-    
     
     input = gets.strip.downcase        # requests input from user lowercase all
     
@@ -38,18 +35,18 @@
      CLI.list_titles
     
     
-    #binding.pry
+    
      end
   end
  
    
    
      def self.call_movie 
+       
        API.new.fetch_web_info  # fetches the info from the url
        
        Movie.all.each do |movie|# iterates through the Movies class in the @@all array
-     end
-     
+      end
     end
      
       def self.list_titles
@@ -70,7 +67,7 @@
         end
       end
        
-       #binding.pry
+      #binding.pry
   
 end
    
