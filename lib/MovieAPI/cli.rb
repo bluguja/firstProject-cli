@@ -1,4 +1,4 @@
-class CLI
+ class CLI
   # thiss file is used to interface with the user
   # executes the flow of what the application does
   
@@ -6,11 +6,11 @@ class CLI
     
     input = ""
      
-    if input == "exit" || input == ""
+    if input == "exit app" || input == ""
       puts "Thanks have a nice day!"
     end
     
-    while input != "exit"
+    while input != "exit app"
     
     puts" "
     puts "oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo".green
@@ -23,14 +23,13 @@ class CLI
     puts"oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo".green
     puts " "
     puts " "
-    puts" To exit at any time type 'exit'"
+    puts" To exit at any time type 'exit app'"
     puts" To see the titles of movie, the ratings and the link To"
     puts "the critics web, enter the  title of movie"
     puts " "
     
     
-    input = ""
-    while input != "exit"
+    
     #input strips any spaces and lines , an downcase ensures all characters entered are low case
     input = gets.strip.downcase 
     
