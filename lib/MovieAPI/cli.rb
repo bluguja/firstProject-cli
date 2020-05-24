@@ -50,7 +50,9 @@
     end
      
       def self.list_titles
-        Movie.all.sort_by { |display_title| display_title.name } do |display_title|
+        Movie.all
+             .sort_by { |display_title| display_title.name } 
+             .each do |display_title|
           puts "#{display_title.name} [Rating: #{display_title.rating}, Link: #{display_title.link}]" 
         end
       end 
