@@ -17,7 +17,7 @@
     
     puts " "
     
-    puts "      HELLO! WELCOME TO MY MOVIE REVIEW APP! lETS BEGIN THE INTERACTION   \u{1f60e}    "
+    puts "      HELLO! WELCOME TO MY MOVIE REVIEW APP! HAVING FUN YET!!   \u{1f60e}    "
     
     puts" "
     puts"oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo".green
@@ -50,10 +50,14 @@
     end
      
       def self.list_titles
-        Movie.all
+        if Movie.all.length() > 0
+          Movie.all
              .sort_by { |display_title| display_title.name } 
              .each do |display_title|
-          puts "#{display_title.name} [Rating: #{display_title.rating}, Link: #{display_title.link}]" 
+            puts "#{display_title.name} [Rating: #{display_title.rating}, Link: #{display_title.link}]" 
+          end
+        else
+          puts "No result to display"
         end
       end 
       
@@ -72,7 +76,6 @@
       #binding.pry
   
 end
-   
 
    
    
