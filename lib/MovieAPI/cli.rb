@@ -22,41 +22,64 @@
     puts"oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo".green
     puts " "
     puts " "
-    puts" To exit at any time hit the  Ctrl + C buttons "
+    puts" To exit at any time type the word exit "
+    puts" "
+    puts " To begin type the word enter"
+    puts " "
     puts" To see the titles of movie, the ratings and the link To"
+    puts" "
     puts "the critics web, enter the title or key words of the movie"
     puts " "
     
     input = gets.strip.downcase        # requests input from user lowercase all
     
-    if input == "" || input== "start"
+      if input == "" || input== "enter"
+        start
+      elsif input == "exit"
+        puts ""
+        puts "Thank you! Have a great day!"
+        exit
+      else
+        puts ""
+        puts "Not an available option, enter another movie title or keyword."
+        start
+      end
+      end 
+    end
+      
+      def start
+      puts ""
+      
+      input = gets.strip.downcase 
+    
+       API.fetch_web_info(input)       # :: shows its nested in the MOVIEAPI folder
+       
+       self.list_titles
+       
+       #binding.pry
+     puts ""
+     puts "Would you want to continue? Enter Y or N"
+
+    input = gets.strip.downcase
+    if input == "y"
       start
-    elsif input == "exit"
+    elsif input == "n"
       puts ""
       puts "Thank you! Have a great day!"
       exit
     else
       puts ""
-      puts "not an available option."
+      puts "Not an available option, enter another movie title or keyword."
       start
-      
-    def start
-    puts ""
-    puts "enter a title of movie or keyword"
-    input = gets.strip.to_i 
     end
+  end
+
+       
+      end 
   
-     API.fetch_web_info(input)       # :: shows its nested in the MOVIEAPI folder
-     
-     CLI.list_titles
-  end 
-end 
-end
    
    
      def self.call_movie 
-       
-       
        
        API.new.fetch_web_info  # fetches the info from the url
        
@@ -88,10 +111,7 @@ end
         end
       end
        
-       
-      #binding.pry
   
-end
 
    
    
