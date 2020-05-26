@@ -44,8 +44,9 @@
         puts "Not an available option, enter another movie title or keyword."
         start
       end
-      end 
+     end
     end
+      
       
       def start
       puts ""
@@ -54,9 +55,9 @@
     
        API.fetch_web_info(input)       # :: shows its nested in the MOVIEAPI folder
        
-       self.list_titles
+       CLI.list_titles
        
-       #binding.pry
+       binding.pry
      puts ""
      puts "Would you want to continue? Enter Y or N"
 
