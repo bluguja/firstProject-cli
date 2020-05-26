@@ -29,15 +29,29 @@
     
     input = gets.strip.downcase        # requests input from user lowercase all
     
+    if input == "" || input== "start"
+      start
+    elsif input == "exit"
+      puts ""
+      puts "Thank you! Have a great day!"
+      exit
+    else
+      puts ""
+      puts "not an available option."
+      start
+      
+    def start
+    puts ""
+    puts "enter a title of movie or keyword"
+    input = gets.strip.to_i 
+    end
+  
      API.fetch_web_info(input)       # :: shows its nested in the MOVIEAPI folder
      
      CLI.list_titles
-    
-    
-    
-     end
-  end
- 
+  end 
+end 
+end
    
    
      def self.call_movie 
