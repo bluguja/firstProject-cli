@@ -10,7 +10,7 @@
       puts "Thanks have a nice day!"
     end
    
-    while input != "exit "
+    while input != "exit"
     
     puts" "
     puts "oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo".green
