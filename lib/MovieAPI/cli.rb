@@ -56,7 +56,7 @@
        API.fetch_web_info(input)       # :: shows its nested in the MOVIEAPI folder
        
        CLI.list_titles
-       binding.pry
+       #binding.pry
      puts ""
      puts "Would you want to continue? Enter Y or N"
 
@@ -76,7 +76,6 @@
   end
 
        
-      end 
   
    
    
@@ -111,7 +110,7 @@
           puts display_rating.name 
         end
       end
-       
+    end
   
 
    
