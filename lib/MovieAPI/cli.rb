@@ -56,14 +56,14 @@
        API.fetch_web_info(input)       # :: shows its nested in the MOVIEAPI folder
        
        CLI.list_titles
-       
        binding.pry
      puts ""
      puts "Would you want to continue? Enter Y or N"
 
     input = gets.strip.downcase
     if input == "y"
-      start
+      
+      
     elsif input == "n"
       puts ""
       puts "Thank you! Have a great day!"
