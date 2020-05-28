@@ -14,7 +14,7 @@
     
     puts " "
     
-    puts "      HELLO! WELCOME TO MY MOVIE REVIEW APP! HAVING FUN YET!!   \u{1f60e}    "
+    puts "      MOVIE REVIEW APP!  \u{1f60e}    "
     
     puts" "
     puts"oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo".green
