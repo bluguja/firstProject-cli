@@ -26,7 +26,7 @@
     puts " "
     puts" enter the title of movie or a keyword to see, the summary and the link To"
     puts" "
-    puts "the web page of the movie "
+    puts "the web page of the movie: Press the enter key to proceed! "
     puts " "
     puts"oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo".blue
 
