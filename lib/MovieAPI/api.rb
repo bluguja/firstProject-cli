@@ -15,10 +15,10 @@ class API
       response["results"].each do |movie|
         #binding.pry
         name = movie["display_title"]
-        rating = movie["mpaa_rating"]
+        summary = movie["summary_short"]
         link = movie["link"]["url"]
         
-        Movie.new(name,rating,link)# new movie instatnce takes in a name, a rating , and a link 34sexit
+        Movie.new(name,summary,link)# new movie instatnce takes in a name, a rating , and a link 34sexit
         
         
       #binding.pry

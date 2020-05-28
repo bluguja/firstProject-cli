@@ -7,8 +7,6 @@
     
     input = ""
     
-     
-   
     while input != "exit"
     
     puts" "
@@ -24,16 +22,17 @@
     puts " "
     puts" To exit at any time type the word exit "
     puts" "
-    puts " To begin type the word enter"
+    puts " This is an app that parses through A critics picks of certain movies and gives information"
+    puts " on same. To begin type the word 'enter' after which, to proceed"
     puts " "
-    puts" To see the titles of movie, the ratings and the link To"
+    puts" enter the title of movie or a keyword to see, the summary and the link To"
     puts" "
-    puts "the critics web, enter the title or key words of the movie"
+    puts "the web page of the movie "
     puts " "
     
     input = gets.strip.downcase        # requests input from user lowercase all
     
-      if input == "" || input== "enter"
+      if input == "enter"
         start
       elsif input == "exit"
         puts ""
@@ -49,7 +48,9 @@
       
       
       def start
-      puts ""
+      puts " "
+      puts "Enter a key word or movie name"
+      puts " "
       
       input = gets.strip.downcase 
     
@@ -89,10 +90,14 @@
      
       def self.list_titles
         if Movie.all.length() > 0
-          Movie.all
-             .sort_by { |display_title| display_title.name } 
-             .each do |display_title|
-            puts "#{display_title.name} - [Rating: #{display_title.rating}, Link: #{display_title.link}]" 
+          Movie.all.sort_by { |display_title| display_title.name } .each do |display_title|
+            puts " "
+            puts "Name: #{display_title.name}"
+            puts " "
+            puts "Summary: #{display_title.summary}"
+            puts " "
+            puts "Link: #{display_title.link}" 
+            puts " "
           end
         else
           puts "No result to display"
@@ -105,9 +110,9 @@
         end
       end 
       
-      def self.list_ratings 
-         Movie.all.sort_by do |display_rating|
-          puts display_rating.name 
+      def self.list_summary
+         Movie.all.sort_by do |summary_short|
+          puts summary_short.name 
         end
       end
     end

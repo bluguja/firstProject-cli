@@ -1,14 +1,14 @@
 #require 'pry'
 # this class is to parse info from web  regarding a movie using the name, link and rating
 class Movie
-  attr_accessor :name, :rating, :link  
+  attr_accessor :name, :summary, :link  
   
   @@all = []
   
   
-  def initialize(name,rating,link) #
+  def initialize(name,summary,link) #
     @name = name 
-    @rating = rating 
+    @summary = summary 
     @link = link 
     
     @@all << self 
