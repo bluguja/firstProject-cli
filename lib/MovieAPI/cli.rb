@@ -20,10 +20,11 @@
     puts"oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo".green
     puts " "
     puts " "
-    puts" To exit at any time type the word exit "
+    puts" To exit at any time type the word exit, You'll be promted to choose if you want to proceed"
+    puts " with a yes 'y' or no 'n' option to opt out"
     puts" "
     puts " This is an app that parses through A critics picks of certain movies and gives information"
-    puts " on same. To begin type the word 'enter' after which, to proceed"
+    puts " on same. To begin any entry at all time please type the word 'enter' after which, to proceed"
     puts " "
     puts" enter the title of movie or a keyword to see, the summary and the link To"
     puts" "
