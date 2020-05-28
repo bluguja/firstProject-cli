@@ -7,18 +7,18 @@
     
     input = ""
     
-    while input != "exit"
+    while input != "exit app"
     
     puts" "
     puts "oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo".blue
     
     puts " "
     
-    puts "      MOVIE REVIEW APP!  \u{1f60e}    "
+    puts "                      MOVIE REVIEW APP!  \u{1f60e}                                     "
     
+    puts " Press the enter tab to begin"
     puts " "
-    puts " "
-    puts" To exit at any time type the word exit, You'll be promted to choose if you want to proceed"
+    puts" To exit at any time type the word 'exit app', You'll be promted to choose if you want to proceed"
     puts " with a yes 'y' or no 'n' option to opt out"
     puts" "
     puts " This is an app that parses through A critics picks of certain movies and gives information"
@@ -32,9 +32,9 @@
 
     input = gets.strip.downcase        # requests input from user lowercase all
     
-      if input == "enter"
+      if input == ""
         start
-      elsif input == "exit"
+      elsif input == "exit app"
         puts ""
         puts "Thank you! Have a great day!"
         exit
@@ -90,7 +90,7 @@
      
       def self.list_titles
         if Movie.all.length() > 0
-          Movie.all.sort_by { |display_title| display_title.name } .each do |display_title|
+          Movie.all.sort_by { |display_title| display_title.name }.each do |display_title|
             puts " "
             puts "Name: #{display_title.name}"
             puts " "
