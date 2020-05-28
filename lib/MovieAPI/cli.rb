@@ -10,14 +10,12 @@
     while input != "exit"
     
     puts" "
-    puts "oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo".green
+    puts "oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo".blue
     
     puts " "
     
     puts "      MOVIE REVIEW APP!  \u{1f60e}    "
     
-    puts" "
-    puts"oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo".green
     puts " "
     puts " "
     puts" To exit at any time type the word exit, You'll be promted to choose if you want to proceed"
@@ -30,7 +28,8 @@
     puts" "
     puts "the web page of the movie "
     puts " "
-    
+    puts"oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo".blue
+
     input = gets.strip.downcase        # requests input from user lowercase all
     
       if input == "enter"
