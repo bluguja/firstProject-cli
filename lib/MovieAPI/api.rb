@@ -18,7 +18,7 @@ class API
         summary = movie["summary_short"]
         link = movie["link"]["url"]
         
-        Movie.new(name,summary,link)# new movie instatnce takes in a name, a rating , and a link 34sexit
+        Movie.new(name,summary,link)# new movie instatnce takes in a name, a summary , and a link 34sexit
         
         
       #binding.pry

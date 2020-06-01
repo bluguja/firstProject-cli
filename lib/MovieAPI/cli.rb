@@ -47,7 +47,7 @@
     end
       
       
-      def start
+    def start
       puts " "
       puts "Enter a key word or movie name"
       puts " "
@@ -61,32 +61,29 @@
      puts ""
      puts "Would you want to continue? Enter Y or N"
 
-    input = gets.strip.downcase
-    if input == "y"
+      input = gets.strip.downcase
+      if input == "y"
       
       
-    elsif input == "n"
+      elsif input == "n"
       puts ""
       puts "Thank you! Have a great day!"
       exit
-    else
+     else
       puts ""
       puts "Not an available option, enter another movie title or keyword."
       start
+      end
     end
-  end
 
        
-  
-   
-   
-     def self.call_movie 
+       def self.call_movie 
        
        API.new.fetch_web_info  # fetches the info from the url
        
        Movie.all.each do |movie|# iterates through the Movies class in the @@all array
+        end
       end
-    end
      
       def self.list_titles
         if Movie.all.length() > 0
