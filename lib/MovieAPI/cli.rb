@@ -81,9 +81,7 @@
        def self.call_movie 
        
        API.new.fetch_web_info  # fetches the info from the url
-       
-       Movie.all.each do |movie|# iterates through the Movies class in the @@all array
-        end
+    
       end
      
       def self.list_titles

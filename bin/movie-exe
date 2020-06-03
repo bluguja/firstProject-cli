@@ -1,6 +1,7 @@
-#!/usr/bin/env ruby
-require_relative '../lib/MovieAPI/cli.rb'
+#!/usr/bin/env ruby # the shebang indicates that this is a ruby file
+
+#require_relative '../lib/MovieAPI/cli.rb# not needed here as this existats in the enviroment.rb file
 
 require_relative '../lib/environment.rb'
 
-cli_call = CLI.new.run # istanciated the class CLI in the file cli.rb
+CLI.new.run # an instance of a new class 

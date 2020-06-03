@@ -10,15 +10,9 @@ Welcome to my new gem! In this directory, you'll find the files you need to be a
 ## Installation
 The program can be located  at the github repository which can be located here `git@github.com:bluguja/firstProject-cli.git`. all related files assosciated with the application can be downloaded in the provided link. The link contains the executionable file located in the fiestProject-cli project directory and the MovieAPI directories respectively., in the /bin folder the movie-exe folde is located which runs the application within the cli.rb file or CLI class. the Movie API folder, houses the api, cli, and movies.rb folders in it. these files are responsible for the body of the application as is. for the most part, the cli.rb where the CLI class is domiciled contains the interactive part of the application. The movies.rb folder holds the initialized instances and methods responsible for storing the calls from the CLI class in an array. it is responsible for  storing and deleting the enteries when and if necesssary in the application.
 
+Also the application would require a key to be got at `https://developer.nytimes.com/get-started`, I ued the Movie API key. this will require the user to register and get a key from the aformentioned website in order to use the app. an env file will have to be created to store the key. When a .env file is created, store the key as `MY_API_KEY = your key here`. to create a .env file
 
 
-And then execute: executes code on command line
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install firstProject-cli
 
 ## Usage
 
@@ -27,7 +21,7 @@ for the most part the instructions for the usage of this application have been d
  
 ## Development
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
 
 ## Contributing
 
