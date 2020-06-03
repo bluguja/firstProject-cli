@@ -51,10 +51,11 @@
       puts " "
       puts "Enter a key word or movie name"
       puts " "
-      
+      # gets user input and removes etranew lines and spaces
       input = gets.strip.downcase 
-    
-       API.fetch_web_info(input)       # :: shows its nested in the MOVIEAPI folder
+      
+      # :: shows its nested in the MOVIEAPI folder
+       API.fetch_web_info(input)       
        
        CLI.list_titles
        #binding.pry
