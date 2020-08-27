@@ -3,33 +3,28 @@
   # thiss file is used to interface with the user
   # executes the flow of what the application does
   
+  
+    puts" "
+    puts "oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo"
+    puts "                      MOVIE REVIEW APP!  \u{1f60e} "
+    puts ""
+    puts "                       Press the enter tab to begin"
+    puts " "
+    puts" To exit at any time type the word 'exit app', You'll be"
+    puts " promted to choose if you want to proceed "
+    puts " with a yes 'y' or no 'n' option to opt out"
+    puts" "
+    puts" enter the title of th movie or a keyword to see its summary and the link"
+    puts"oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo"
+
+  
   def run 
     
     input = ""
     
     while input != "exit app"
     
-    puts" "
-    puts "oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo".blue
     
-    puts " "
-    
-    puts "                      MOVIE REVIEW APP!  \u{1f60e}                                     "
-    
-    puts " Press the enter tab to begin"
-    puts " "
-    puts" To exit at any time type the word 'exit app', You'll be promted to choose if you want to proceed"
-    puts " with a yes 'y' or no 'n' option to opt out"
-    puts" "
-    puts " This is an app that parses through A critics picks of certain movies and gives information"
-    puts " on same. To begin any entry at all time please type the word 'enter' after which, to proceed"
-    puts " "
-    puts" enter the title of movie or a keyword to see, the summary and the link To"
-    puts" "
-    puts "the web page of the movie: Press the enter key to proceed! "
-    puts " "
-    puts"oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo".blue
-
     input = gets.strip.downcase        # requests input from user lowercase all
     
       if input == ""
