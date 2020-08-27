@@ -1,6 +1,6 @@
 
-# This API class is responsible for getting processing info from the API web info)
-class API
+  # This API class is responsible for getting processing info from the API web info)
+  class API
   
     
     def self.fetch_web_info(web_info)
