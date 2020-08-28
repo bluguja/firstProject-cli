@@ -103,13 +103,17 @@
     end 
       
     def view_more_info?
-      puts "enter the coresponding number by the list"
+      puts ""
+      puts "enter the coresponding number by the list, example 1, to display the link "
+      puts " and a sumary of the chosen Movie"
       input = gets.strip.downcase 
       count = Movie.display_list_titles.size
       Movie.selected_matches.each.with_index(1) do |movie, index|
         
         if input == index.to_s
+          puts ""
           puts "#{movie.link}"
+          puts ""
           puts "#{movie.summary}"
         end
       
