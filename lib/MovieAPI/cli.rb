@@ -52,26 +52,24 @@
        
        
        CLI.list_titles(input)
-       put " which Title would you want more information on?"
-      input = gets.strip.downcase 
-      if input == (1) 
-        puts ""
-        
-       #binding.pry
+        view_more_info?
+       
       puts ""
       puts "Would you want to continue? Enter Y or N"
 
       input = gets.strip.downcase
       if input == "y"
-      start
+        
+        Movie.destroy
+        start
       elsif input == "n"
-      puts ""
-      puts "Thank you! Have a great day!"
-      exit
-    
-      puts ""
-      puts "Not an available option, enter another movie title or keyword."
-      start
+        puts ""
+        puts "Thank you! Have a great day!"
+        exit
+      
+        puts ""
+        puts "Not an available option, enter another movie title or keyword."
+        start
       end
     end
     
@@ -86,32 +84,43 @@
      
     def self.list_titles(input)
       i = 1
-        if Movie.all.length() > 0
-          Movie.all.sort_by { |display_title| display_title.name }.each do |display_title|
+      if Movie.all.length() > 0
+        Movie.all.sort_by { |display_title| display_title.name }.each do |display_title|
             
-            if display_title.name.downcase.include?(input) 
+          if display_title.name.downcase.include?(input) 
              
              Movie.display_list_titles << "#{i}. Name: #{display_title.name}"
+             Movie.selected_matches << display_title
               puts " "
               puts "#{i}. Name: #{display_title.name}"
-              # puts " "
-              # puts "Summary: #{display_title.summary}"
-              # puts " "
-              # puts "Link: #{display_title.link}" 
-              # puts " " 
               
               i += 1
-             end
-            
-            
+          
           end
-        else
-          puts "No result to display"
+          
+         
+            
+        end
+        
+        
       end
-      binding.pry
+      
     end 
       
-    
+    def view_more_info?
+      puts "enter the coresponding number by the list"
+      input = gets.strip.downcase 
+      count = Movie.display_list_titles.size
+      Movie.selected_matches.each.with_index(1) do |movie, index|
+        
+        if input == index.to_s
+          puts "#{movie.link}"
+          puts "#{movie.summary}"
+        end
+      
+        
+      end 
+    end
       
     def self.list_links
          Movie.all.sort_by do |display_link|

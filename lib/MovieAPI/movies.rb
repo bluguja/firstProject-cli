@@ -5,6 +5,7 @@
   
   @@all = []
   @@display_list_titles = []
+  @@selected_matches = []
   
     def initialize(name,summary,link) 
     @name = name 
@@ -21,11 +22,18 @@
     end 
     
     
+    
     def self.display_list_titles
-        
-        @@display_list_titles
-      end
+      @@display_list_titles
+    end
+    
+    def self.selected_matches
+      @@selected_matches
+    end
   
+    def self.destroy
+      @@all = []
+    end
   end 
   
  
