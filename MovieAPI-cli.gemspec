@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["'bluguja@gmail.com'"]
 
   spec.summary       = %q{this is a CLI lab that displays movies.}
- spec.description   = %q{CLi for Movie reviw by critics.}
+ spec.description   = %q{CLi for Movie review by critics.}
   #spec.homepage      = "https://github.com/bluguja/firstProject-cli."
   spec.license       = "MIT"
 
