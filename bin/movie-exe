@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby # the shebang indicates that this is a ruby file
+#!/usr/bin/env ruby    
 
 #require_relative '../lib/MovieAPI/cli.rb# not needed here as this existats in the enviroment.rb file
 

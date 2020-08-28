@@ -11,7 +11,7 @@
       url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=#{web_info}&api-key=#{key}"
       
       response = HTTParty.get(URI(url))
-      #binding.pryn
+      # binding.pry
       
     
       response["results"].each do |movie|

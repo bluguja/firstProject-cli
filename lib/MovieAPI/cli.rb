@@ -50,7 +50,13 @@
       # :: shows its nested in the MOVIEAPI folder
        API.fetch_web_info(input)       
        
-       CLI.list_titles
+       
+       CLI.list_titles(input)
+       put " which Title would you want more information on?"
+      input = gets.strip.downcase 
+      if input == (1) 
+        puts ""
+        
        #binding.pry
       puts ""
       puts "Would you want to continue? Enter Y or N"
@@ -78,21 +84,34 @@
     
     end
      
-    def self.list_titles
+    def self.list_titles(input)
+      i = 1
         if Movie.all.length() > 0
           Movie.all.sort_by { |display_title| display_title.name }.each do |display_title|
-            puts " "
-            puts "Name: #{display_title.name}"
-            puts " "
-            puts "Summary: #{display_title.summary}"
-            puts " "
-            puts "Link: #{display_title.link}" 
-            puts " "
+            
+            if display_title.name.downcase.include?(input) 
+             
+             Movie.display_list_titles << "#{i}. Name: #{display_title.name}"
+              puts " "
+              puts "#{i}. Name: #{display_title.name}"
+              # puts " "
+              # puts "Summary: #{display_title.summary}"
+              # puts " "
+              # puts "Link: #{display_title.link}" 
+              # puts " " 
+              
+              i += 1
+             end
+            
+            
           end
         else
           puts "No result to display"
       end
+      binding.pry
     end 
+      
+    
       
     def self.list_links
          Movie.all.sort_by do |display_link|
