@@ -47,7 +47,7 @@
       # gets user input and removes etranew lines and spaces
       input = gets.strip.downcase 
       
-      # :: shows its nested in the MOVIEAPI folder
+      
        API.fetch_web_info(input)       
        
        
@@ -73,9 +73,7 @@
       end
     end
     
-    # create option for user to see a numbered list of the movies that exist in the @@all array.
-    # when the user picks a movie from that numbered list, we don't make another api call, but rather we look at our object class (Movie) and find the object Movie object that matches the user's selection , and lists the details of that Movie object once again for the user.
-
+    
     def self.call_movie 
        
        API.new.fetch_web_info  # fetches the info from the url
@@ -98,11 +96,8 @@
           
           end
           
-         
-            
         end
-        
-        
+       
       end
       
     end 

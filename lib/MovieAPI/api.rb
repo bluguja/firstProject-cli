@@ -11,18 +11,16 @@
       url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=#{web_info}&api-key=#{key}"
       
       response = HTTParty.get(URI(url))
-      # binding.pry
+      
       
     
       response["results"].each do |movie|
-        name = movie["display_title"]
-        summary = movie["summary_short"]
-        link = movie["link"]["url"]
+      name = movie["display_title"]
+      summary = movie["summary_short"]
+      link = movie["link"]["url"]
+      
+      Movie.new(name,summary,link)# new movie instatnce takes in a name, a summary , and a link 34sexit
         
-        Movie.new(name,summary,link)# new movie instatnce takes in a name, a summary , and a link 34sexit
-        
-        
-      #binding.pry
      end 
     end
   end 
