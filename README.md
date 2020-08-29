@@ -2,15 +2,16 @@ how are ya
 
 # FirstProject::Cli
 
-Welcome to my new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. The code file is located in the file `lib/firstProject/cli`. To experiment with that code, I ran the  `bin/console` for an interactive prompt. The executable fie, however, is located in the `./bin/movie-exe` file in the fiestProject-cli directory. 
-  the program is a very staright farward comand line interface  application. which promts a user to enter a movie name or keyword when prompted in the application. when the user does enter the parameters requested, the application will inform the user if the movie existas in the application or not. if it does exists, the user gets the link to the movie and the rating alongside it, if it does not exist, the user is prompted to enter another entry or exit the interaction all together.
-
-
-
-## Installation
-The program can be located  at the github repository which can be located here `git@github.com:bluguja/firstProject-cli.git`. all related files assosciated with the application can be downloaded in the provided link. The link contains the executionable file located in the fiestProject-cli project directory and the MovieAPI directories respectively., in the /bin folder the movie-exe folde is located which runs the application within the cli.rb file or CLI class. the Movie API folder, houses the api, cli, and movies.rb folders in it. these files are responsible for the body of the application as is. for the most part, the cli.rb where the CLI class is domiciled contains the interactive part of the application. The movies.rb folder holds the initialized instances and methods responsible for storing the calls from the CLI class in an array. it is responsible for  storing and deleting the enteries when and if necesssary in the application.
-
-Also the application would require a key to be got at `https://developer.nytimes.com/get-started`, I ued the Movie API key. this will require the user to register and get a key from the aformentioned website in order to use the app. an env file will have to be created to store the key. When a .env file is created, store the key as `MY_API_KEY = your key here`. to create a .env file
+Welcome to the CLi movie application. This app was designed to prompt a user for information to be entered within the terminal and a response will be given based on the request. the application can be used in the following way:
+1, The user starts by cloning the application from here: `git@github.com:bluguja/firstProject-cli.git`
+2, A change in directory is also neccessary in order to have acces to the FirstProject-cli directory
+3, A `bundle install` is then initiated to run the gem files installed within the application
+4, to execute the file, a command `./bin/movie-exe` is enterd on the terminal which will run the application on the command line
+4, the user is then prompted to press the `enter` key on the keyboard plus a series of other commands
+5, The user will then be prompted to enter a keyword or a movie name
+6, if the keyword is entered, a list of movies that have the keyword or movie name will apear and the user is given the option to chose from the list(s) of
+   movies enumerated by entering the number of the movie. example if the list contains 3 movies numbered 1...3, user can pick say 3
+7, when the user picks an option, a summary and a link to the movie is displayed so user can access more information on the movie picked
 
 
 
@@ -18,10 +19,6 @@ Also the application would require a key to be got at `https://developer.nytimes
 
 for the most part the instructions for the usage of this application have been described in the
  istallation portion of this application. refer to ` Installation `
- 
-## Development
-
-
 
 ## Contributing
 
