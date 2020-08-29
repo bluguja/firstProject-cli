@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby    
 
-#require_relative '../lib/MovieAPI/cli.rb# not needed here as this existats in the enviroment.rb file
-
 require_relative '../lib/environment.rb'
 
 CLI.new.run # an instance of a new class 
