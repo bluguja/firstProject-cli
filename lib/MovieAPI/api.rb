@@ -1,12 +1,13 @@
 
   # This API class is responsible for getting processing info from the API web info)
+  
   class API
   
     
     def self.fetch_web_info(web_info)
-         CLI.new.run
+         
       
-        key = "P0xlJDApD8qGo6AK31J0zS19Avwu2lpz" #Web key 
+        key = ENV['MY_API_KEY'] #Web key 
         
        
         url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=#{web_info}&api-key=#{key}"

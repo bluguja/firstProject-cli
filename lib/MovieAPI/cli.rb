@@ -3,7 +3,7 @@
   # thiss file is used to interface with the user
   # executes the flow of what the application does
   
-  
+  def intro
     puts" "
     puts "oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo"
     puts "                      MOVIE REVIEW APP!  \u{1f60e} "
@@ -16,10 +16,10 @@
     puts" "
     puts" enter the title of th movie or a keyword to see its summary and the link"
     puts"oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo"
-
+  end
   
     def run 
-      
+      intro
       input = ""
       
       while input != "exit app" 
