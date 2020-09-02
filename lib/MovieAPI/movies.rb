@@ -13,15 +13,11 @@
     @link = link 
     
     @@all << self 
-    
-  
     end 
   
     def self.all 
     @@all 
     end 
-    
-    
     
     def self.display_list_titles
       @@display_list_titles

@@ -113,10 +113,8 @@
           puts "#{movie.link}"
           puts ""
           puts "#{movie.summary}"
-        end
-      
-        
-      end 
+          end
+        end 
     end
       
     def self.list_links
