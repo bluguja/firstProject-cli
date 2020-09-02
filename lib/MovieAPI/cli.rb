@@ -22,7 +22,7 @@
       
       input = ""
       
-      while input != "exit app"
+      while input != "exit app" 
       
       
       input = gets.strip.downcase        # requests input from user lowercase all
@@ -44,7 +44,7 @@
       puts " "
       # gets user input and removes etranew lines and spaces
       input = gets.strip.downcase 
-      
+    
       
        API.fetch_web_info(input)       
        
