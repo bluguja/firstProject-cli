@@ -12,15 +12,19 @@
       
       response = HTTParty.get(URI(url))
       
-      
-    
+      if response["has_more"] == false 
+         puts ""
+         puts "Not an available option."
+          CLI.new.start 
+      else
+          
       response["results"].each do |movie|
       name = movie["display_title"]
       summary = movie["summary_short"]
       link = movie["link"]["url"]
       
       Movie.new(name,summary,link)# new movie instatnce takes in a name, a summary , and a link 
-        
+      end 
      end 
     end
   end 

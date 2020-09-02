@@ -32,9 +32,7 @@
         elsif input == "exit app"
           puts "Thank you! Have a great day!"
           exit
-          puts ""
-          puts "Not an available option, enter another movie title or keyword."
-          start
+          
         end
       end
     end
@@ -67,8 +65,8 @@
         puts "Thank you! Have a great day!"
         exit
       
-        puts ""
-        puts "Not an available option, enter another movie title or keyword."
+        # puts ""
+        # puts "Not an available option, enter another movie title or keyword."
         start
       end
     end
