@@ -3,7 +3,7 @@ source "https://rubygems.org"
 #gem 'rspec'
 gem 'require_all',  '~> 1.0'
 gem 'colorize', '~> 0.8.1'
-gem "sinatra", "1.4.4"
+gem "sinatra", "2.2.3"
 gem "hashie"
 gem "octokit", "~> 2.0"
 gem 'awesome_print', :git => "git@github.com:awesome-print/awesome_print.git"
